@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary-clr: #7ee8fa;
+  --dark-clr: #34495e;
+  --light-clr: #f4f4f4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: inherit;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2em;
+  padding-bottom: 5em;
+  background-color: var(--dark-clr);
+  color: var(--light-clr);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  transform: scale(0.9);
+  transition: transform 250ms ease-in;
+  font-size: 1.25rem;
+}
+
+.btn:hover {
+  transform: scale(1);
+}
+
+.btn.new-quote {
+  padding: 0.75em 1em;
+  background-color: var(--primary-clr);
+  color: var(--dark-clr);
+  text-transform: uppercase;
+  margin-right: 1.5em;
+}
+
+.btn.tweet-quote {
+  padding: 0.75em;
+  background-color: var(--light-clr);
+  color: var(--dark-clr);
+  text-decoration: none;
+}
+
+#quote-box {
+  width: 33%;
+  min-width: 350px;
+  max-width: 750px;
+  text-align: center;
+}
+
+.quote {
+  font-family: "Spirax", cursive;
+  font-size: 10rem;
+  margin: 0;
+  margin-bottom: -150px;
+  color: var(--primary-clr);
+}
+
+#text {
+  font-size: 3rem;
+  font-family: "Allan", cursive;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+#text::after {
+  content: "";
+  position: absolute;
+  left: 37%;
+  right: 37%;
+  bottom: -0.75em;
+  height: 3px;
+  background: var(--primary-clr);
+}
+
+#author {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
